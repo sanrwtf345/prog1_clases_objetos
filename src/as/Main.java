@@ -49,6 +49,8 @@ public class Main {
     Marca marca = new Marca("asdasd");
     System.out.println("Marca 2: "+ marca.getId()+""+marca.getMarca());
 
+    Producto producto4 = new Producto(1, "rodado 26 rojo",654654, 5);
+
     //los atributos y metodos static son unicos para la clase, se usan
     //a partir del nombre de la clase
 

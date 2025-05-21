@@ -8,14 +8,17 @@ public class Producto {
   private int stock;
   private boolean vigente;
   private final String tipo="Bicicleta";
+  private Marca marca;
 
   //metodo constructor: es el metodo que se llama cada vez que creo un objeto de la clase
   public Producto() {
+    this.marca = new Marca();
   }
 
   public Producto(int id, String nombre) {
     this.id = id;
     this.nombre = nombre;
+    this.marca = new Marca();
   }
 
   public Producto(int id, String nombre, double precio, int stock) {
@@ -23,6 +26,7 @@ public class Producto {
     this.nombre = nombre;
     this.precio = precio;
     this.stock = stock;
+    this.marca = new Marca();
   }
   //crear metodos
 
@@ -35,7 +39,8 @@ public class Producto {
         "\n Stock: " + this.stock +
         "\n Precio: " + this.precio +
         "\n "+this.getStrVigente()+
-        "\n tipo: "+ tipo;
+        "\n tipo: "+ tipo+
+        "\n marca: "+ this.marca.getId()+""+this.marca.getMarca();
 
   }
 
@@ -88,5 +93,11 @@ public class Producto {
   }
   public String getStrVigente(){
    return this.vigente==true?"Esta vigente":"No esta vigente";
+  }
+  public void setMarca(Marca marca){
+    this.marca = marca;
+  }
+  public Marca getMarca(){
+    return this.marca;
   }
 }
