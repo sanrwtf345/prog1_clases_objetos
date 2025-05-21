@@ -9,16 +9,20 @@ public class Producto {
   private boolean vigente;
   private final String tipo="Bicicleta";
   private Marca marca;
+  //agregar setter y getter para los enums
+  private TipoProducto tipoProducto;
 
   //metodo constructor: es el metodo que se llama cada vez que creo un objeto de la clase
   public Producto() {
     this.marca = new Marca();
+    this.tipoProducto = TipoProducto.BICILETAS;
   }
 
   public Producto(int id, String nombre) {
     this.id = id;
     this.nombre = nombre;
     this.marca = new Marca();
+    this.tipoProducto = TipoProducto.BICILETAS;
   }
 
   public Producto(int id, String nombre, double precio, int stock) {
@@ -27,6 +31,7 @@ public class Producto {
     this.precio = precio;
     this.stock = stock;
     this.marca = new Marca();
+    this.tipoProducto = TipoProducto.BICILETAS;
   }
   //crear metodos
 
